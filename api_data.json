@@ -511,7 +511,7 @@
   },
   {
     "type": "get",
-    "url": "/curso/mostrar_turno/:idTurno",
+    "url": "/curso/mostrar_turno/:id",
     "title": "get todos Ordenados",
     "version": "1.0.0",
     "name": "getCursos",
@@ -561,7 +561,7 @@
   },
   {
     "type": "get",
-    "url": "/curso/mostrar_turno/:id",
+    "url": "/curso/mostrar_turno/:idTurno",
     "title": "get todos Ordenados",
     "version": "1.0.0",
     "name": "getCursos",
@@ -1000,7 +1000,7 @@
   {
     "type": "post",
     "url": "/usuario",
-    "title": "Adicionar usuario admin",
+    "title": "Adicionar USUARIO admin",
     "name": "apiName",
     "group": "Usuario",
     "parameter": {
@@ -1065,7 +1065,7 @@
     "type": "post",
     "url": "/usuario/cambiarPassword",
     "title": "Cambiar Password usuario",
-    "name": "cambiar_password",
+    "name": "cambiar_password_de_usuario",
     "description": "<p>Debe estar logueado.</p>",
     "group": "Usuario",
     "parameter": {
@@ -1123,7 +1123,7 @@
     "type": "post",
     "url": "/usuario/resetearPassword/:id",
     "title": "resetear password de usuario",
-    "name": "cambiar_password",
+    "name": "resetear_password_de_un_usuario",
     "group": "Usuario",
     "parameter": {
       "fields": {
@@ -1166,7 +1166,7 @@
     "type": "post",
     "url": "/persona/credencial/:id",
     "title": "credencial usuario",
-    "name": "cambiar_password",
+    "name": "ver_credenciales_de_ususario",
     "description": "<p>Debe estar logueado.</p>",
     "group": "Usuario",
     "success": {
