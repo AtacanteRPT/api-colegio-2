@@ -1075,7 +1075,14 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "password",
+            "field": "actualPassword",
+            "description": "<p>nuevo password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "NuevoPassword",
             "description": "<p>nuevo password</p>"
           }
         ]
@@ -1083,7 +1090,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n    \"id\" : 1,\n     \"password\" : \"nuevoPass\" \n}",
+          "content": "{\n    \n     \"actualPassword\" : \"actualpass\" \n     \"nuevoPassword\" : \"nuevoPass\" \n}",
           "type": "type"
         }
       ]
@@ -1104,6 +1111,80 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "{\n \"mensaje\": \"cambio de password exitoso\"\n }",
+          "type": "type"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "api/usuario.js",
+    "groupTitle": "Usuario"
+  },
+  {
+    "type": "post",
+    "url": "/usuario/resetearPassword/:id",
+    "title": "resetear password de usuario",
+    "name": "cambiar_password",
+    "group": "Usuario",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>id de la persona</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "type",
+            "optional": false,
+            "field": "name",
+            "description": "<p>description irc</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n          \"mensaje\": \"se a reseteado el password\"\n         }",
+          "type": "type"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "api/usuario.js",
+    "groupTitle": "Usuario"
+  },
+  {
+    "type": "post",
+    "url": "/persona/credencial/:id",
+    "title": "credencial usuario",
+    "name": "cambiar_password",
+    "description": "<p>Debe estar logueado.</p>",
+    "group": "Usuario",
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "type",
+            "optional": false,
+            "field": "name",
+            "description": "<p>description irc</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"createdAt\": null,\n  \"updatedAt\": null,\n  \"id\": 966,\n  \"username\": \"965Sergio\",\n  \"codigo_qr\": \"Sergio Eduardo Mamani Munguia\",\n  \"rol\": \"tutor\",\n  \"idPersona\": 965\n}",
           "type": "type"
         }
       ]
