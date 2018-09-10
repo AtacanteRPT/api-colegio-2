@@ -1120,7 +1120,7 @@ define({ "api": [
     "groupTitle": "Usuario"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/usuario/resetearPassword/:id",
     "title": "resetear password de usuario",
     "name": "resetear_password_de_un_usuario",
