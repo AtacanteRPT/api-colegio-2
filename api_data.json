@@ -711,6 +711,45 @@
     "groupTitle": "Dispositivo"
   },
   {
+    "type": "get",
+    "url": "/gestionacademica/gestionActual",
+    "title": "gestionActual",
+    "group": "Gestion",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "administrador",
+            "description": "<p>administrador's list</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success",
+          "content": "   HTTP/1.1 200 OK\n{\n  \"createdAt\": 1534709806693,\n  \"updatedAt\": 1534709806693,\n  \"id\": 1,\n  \"tipo\": \"anual\",\n  \"fecha_inicio\": \"2018-01-01T05:00:00.000Z\",\n  \"fecha_fin\": \"2018-12-31T05:00:00.000Z\",\n  \"gestion\": null,\n  \"horaEntrada\": null,\n  \"horaSalida\": null\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "List error",
+          "content": "HTTP/1.1 500 Internal Server Error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "api/Administrador.js",
+    "groupTitle": "Gestion",
+    "name": "GetGestionacademicaGestionactual"
+  },
+  {
     "type": "delete",
     "url": "/api/v1/tasks/:id",
     "title": "Delete a task",
